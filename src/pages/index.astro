@@ -1,0 +1,31 @@
+---
+const services = [
+  ['Landing pages', 'Experiencias rápidas que convierten visitas en conversaciones.'],
+  ['E-commerce', 'Catálogos, carrito y checkout listos para conectar.'],
+  ['SaaS y paneles', 'Interfaces operativas claras para equipos y clientes.'],
+];
+const steps = ['Descubrimos el problema', 'Diseñamos el flujo', 'Construimos y medimos'];
+---
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" />
+  <meta name="description" content="Archity crea productos digitales B2B rápidos, visuales y listos para crecer." />
+  <meta property="og:title" content="Archity — Productos digitales B2B" />
+  <meta property="og:description" content="Software visual para empresas que quieren avanzar." />
+  <title>Archity — Productos digitales B2B</title>
+  <style is:global>
+    :root{font-family:Inter,system-ui,sans-serif;color:#10131a;background:#f6f7f9}*{box-sizing:border-box}body{margin:0}a{color:inherit;text-decoration:none}.wrap{width:min(1120px,92vw);margin:auto}.nav{height:72px;display:flex;align-items:center;justify-content:space-between}.brand{font-weight:800;letter-spacing:.18em}.navlinks{display:flex;gap:1.2rem;font-size:.9rem;color:#5d6470}.btn{display:inline-flex;border:0;border-radius:12px;padding:.85rem 1.1rem;font-weight:700;cursor:pointer}.dark{background:#10131a;color:white}.blue{background:#3568ff;color:white}.hero{padding:7rem 0 5rem;display:grid;grid-template-columns:1.2fr .8fr;gap:3rem;align-items:end}.eyebrow{color:#3568ff;font-size:.75rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase}.hero h1{font-size:clamp(3rem,7vw,6.4rem);line-height:.95;letter-spacing:-.07em;margin:1rem 0}.hero p{max-width:570px;color:#656d79;font-size:1.1rem}.actions{display:flex;gap:.75rem;flex-wrap:wrap;margin-top:2rem}.visual{min-height:360px;border-radius:28px;background:linear-gradient(145deg,#10131a,#3568ff);padding:1rem;display:flex;align-items:end}.dashboard{background:#fff;border-radius:18px;padding:1rem;width:100%;box-shadow:0 24px 50px #0003}.line{height:10px;background:#e8ebf0;border-radius:10px;margin:.7rem 0}.line.short{width:55%}.metric{font-size:2.8rem;font-weight:800}.section{padding:5rem 0}.section h2{font-size:clamp(2rem,4vw,3.5rem);letter-spacing:-.05em;margin:.7rem 0 2rem}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}.card{background:white;border:1px solid #e6e8ed;border-radius:20px;padding:1.5rem}.card h3{margin-top:0}.muted{color:#68717d}.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}.step{border-top:2px solid #3568ff;padding-top:1rem}.cta{background:#10131a;color:white;border-radius:24px;padding:3rem}.cta form{display:flex;gap:.6rem;flex-wrap:wrap;margin-top:1.5rem}.cta input{border:0;border-radius:10px;padding:.9rem;min-width:230px}.faq details{background:white;border-bottom:1px solid #e6e8ed;padding:1rem 0}.faq summary{cursor:pointer;font-weight:700}@media(max-width:760px){.navlinks{display:none}.hero{grid-template-columns:1fr;padding:4rem 0}.grid,.steps{grid-template-columns:1fr}.section{padding:3.5rem 0}}
+  </style>
+</head>
+<body>
+<header class="wrap"><nav class="nav"><a class="brand" href="/">ARCHITY</a><div class="navlinks"><a href="#servicios">Servicios</a><a href="#proceso">Proceso</a><a href="#contacto">Contacto</a></div><a class="btn dark" href="#contacto">Hablemos</a></nav></header>
+<main>
+<section class="wrap hero"><div><span class="eyebrow">Software studio · B2B</span><h1>Menos fricción. Más negocio.</h1><p>Diseñamos experiencias digitales que hacen más simple vender, operar y crecer.</p><div class="actions"><a class="btn dark" href="#contacto">Iniciar proyecto</a><a class="btn" href="#servicios">Ver capacidades</a></div></div><div class="visual"><div class="dashboard"><span class="eyebrow">Performance</span><div class="metric">+42%</div><p class="muted">flujo digital más claro</p><div class="line"></div><div class="line short"></div><div class="line"></div></div></div></section>
+<section id="servicios" class="wrap section"><span class="eyebrow">Qué hacemos</span><h2>Construcción digital con criterio.</h2><div class="grid">{services.map(([title, text]) => <article class="card"><h3>{title}</h3><p class="muted">{text}</p></article>)}</div></section>
+<section id="proceso" class="wrap section"><span class="eyebrow">Proceso</span><h2>Claro desde el primer día.</h2><div class="steps">{steps.map((step, i) => <div class="step"><strong>0{i+1}</strong><p>{step}</p></div>)}</div></section>
+<section class="wrap section"><div class="cta" id="contacto"><span class="eyebrow">Siguiente paso</span><h2>Cuéntanos qué quieres mejorar.</h2><p class="muted">Formulario demo frontend. Conecta tu endpoint o WhatsApp cuando estés listo.</p><form onsubmit="event.preventDefault();this.reset();document.querySelector('#sent').hidden=false"><input required placeholder="Tu email" type="email" /><button class="btn blue">Solicitar conversación</button></form><p id="sent" hidden>Solicitud guardada localmente. Te contactaremos pronto.</p></div></section>
+<section class="wrap section faq"><span class="eyebrow">FAQ</span><details><summary>¿Trabajan con proyectos existentes?</summary><p class="muted">Sí. Podemos mejorar, migrar o separar el frontend de sistemas existentes.</p></details><details><summary>¿El proyecto incluye backend?</summary><p class="muted">Esta landing es frontend-only. La arquitectura final se define según el producto.</p></details></section>
+</main><footer class="wrap section"><small class="muted">© 2026 Archity · Astro + TypeScript · Frontend static</small></footer>
+</body></html>
